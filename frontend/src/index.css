@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-200 antialiased;
+  overflow-x: hidden;
+}
+
+.glass {
+  @apply bg-slate-900/60 backdrop-blur-lg border border-white/10 shadow-glass;
+}
+
+.glass-strong {
+  @apply bg-slate-900/85 backdrop-blur-xl border border-white/10 shadow-glass-lg;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-uplift-500 to-uplift-600 px-6 py-3 font-semibold text-white shadow-glow transition-transform hover:scale-[1.03] hover:shadow-glow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-400 active:scale-95;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/15 bg-white/5 px-6 py-3 font-semibold text-slate-100 backdrop-blur transition-transform hover:scale-[1.03] hover:border-uplift-400/50 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-400 active:scale-95;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-400;
+}
+
+/* Accessibility: high contrast mode */
+.high-contrast {
+  filter: contrast(1.25) saturate(1.1);
+}
+.high-contrast body {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+.high-contrast .glass,
+.high-contrast .glass-strong {
+  background: #000000 !important;
+  border-color: #ffffff !important;
+}
+.high-contrast * {
+  text-shadow: none !important;
+}
+
+/* Accessibility: reduce motion */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 180, 137, 0.4);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
