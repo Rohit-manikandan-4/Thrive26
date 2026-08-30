@@ -49,11 +49,11 @@ export default function Onboarding() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1.4, ease: 'linear' }}
-          className="flex h-16 w-16 items-center justify-center rounded-full bg-uplift-100 text-uplift-600"
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-uplift-500/10 text-uplift-400"
         >
           <Sparkles size={28} />
         </motion.div>
-        <p className="text-lg font-semibold text-slate-700">{t('onboarding.loading')}</p>
+        <p className="text-lg font-semibold text-slate-300">{t('onboarding.loading')}</p>
       </div>
     );
   }
@@ -61,10 +61,10 @@ export default function Onboarding() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
       <div className="mb-6">
-        <p className="text-sm font-semibold text-uplift-700">
+        <p className="text-sm font-semibold text-uplift-400">
           {t('onboarding.stepLabel', { current: step, total: totalSteps })}
         </p>
-        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-200">
+        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-white/10">
           <motion.div
             className="h-full rounded-full bg-uplift-600"
             animate={{ width: `${(step / totalSteps) * 100}%` }}
@@ -111,10 +111,10 @@ export default function Onboarding() {
             )}
             {step === 4 && (
               <div>
-                <h2 className="text-xl font-bold text-slate-800">{t('onboarding.step4.title')}</h2>
+                <h2 className="text-xl font-bold text-white">{t('onboarding.step4.title')}</h2>
                 <div className="mt-5 space-y-4">
                   <div>
-                    <label htmlFor="state" className="mb-1.5 block text-sm font-semibold text-slate-600">
+                    <label htmlFor="state" className="mb-1.5 block text-sm font-semibold text-slate-400">
                       {t('onboarding.step4.state')}
                     </label>
                     <input
@@ -123,11 +123,11 @@ export default function Onboarding() {
                       value={profile.state}
                       onChange={(e) => updateProfile({ state: e.target.value })}
                       placeholder={t('onboarding.step4.statePlaceholder')}
-                      className="focus-ring w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm"
+                      className="focus-ring w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500"
                     />
                   </div>
                   <div>
-                    <label htmlFor="city" className="mb-1.5 block text-sm font-semibold text-slate-600">
+                    <label htmlFor="city" className="mb-1.5 block text-sm font-semibold text-slate-400">
                       {t('onboarding.step4.city')}
                     </label>
                     <input
@@ -136,7 +136,7 @@ export default function Onboarding() {
                       value={profile.city}
                       onChange={(e) => updateProfile({ city: e.target.value })}
                       placeholder={t('onboarding.step4.cityPlaceholder')}
-                      className="focus-ring w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm"
+                      className="focus-ring w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500"
                     />
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export default function Onboarding() {
             type="button"
             onClick={() => setStep((s) => Math.max(1, s - 1))}
             disabled={step === 1}
-            className="focus-ring flex items-center gap-1 rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-600 disabled:opacity-30"
+            className="focus-ring flex items-center gap-1 rounded-full border border-white/15 px-4 py-2.5 text-sm font-semibold text-slate-300 disabled:opacity-30"
           >
             <ChevronLeft size={16} /> {t('onboarding.back')}
           </button>
@@ -183,7 +183,7 @@ export default function Onboarding() {
 function OptionStep({ title, options, labelFor, selected, onSelect }) {
   return (
     <div>
-      <h2 className="text-xl font-bold text-slate-800">{title}</h2>
+      <h2 className="text-xl font-bold text-white">{title}</h2>
       <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
         {options.map((opt) => (
           <button
@@ -193,8 +193,8 @@ function OptionStep({ title, options, labelFor, selected, onSelect }) {
             aria-pressed={selected === opt}
             className={`focus-ring rounded-2xl border-2 px-4 py-3.5 text-left text-sm font-semibold transition ${
               selected === opt
-                ? 'border-uplift-600 bg-uplift-50 text-uplift-800'
-                : 'border-slate-200 bg-white text-slate-600 hover:border-uplift-300'
+                ? 'border-uplift-500 bg-uplift-500/10 text-uplift-300'
+                : 'border-white/10 bg-white/5 text-slate-300 hover:border-uplift-400/40'
             }`}
           >
             {labelFor(opt)}

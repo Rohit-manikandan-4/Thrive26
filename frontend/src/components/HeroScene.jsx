@@ -81,7 +81,7 @@ export default function HeroScene() {
       >
         <div className="grid grid-cols-3 gap-4 opacity-80">
           {['Education', 'Jobs', 'Skills', 'Government', 'Financial', 'AI'].map((label) => (
-            <div key={label} className="glass rounded-2xl px-4 py-6 text-center text-sm font-semibold text-uplift-800">
+            <div key={label} className="glass rounded-2xl px-4 py-6 text-center text-sm font-semibold text-uplift-300">
               {label}
             </div>
           ))}

@@ -21,9 +21,20 @@ function PageLoading() {
   );
 }
 
+function AmbientGlow() {
+  return (
+    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div className="absolute left-1/2 top-[-15%] h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-uplift-500/20 blur-[120px]" />
+      <div className="absolute right-[-10%] top-[25%] h-[420px] w-[420px] rounded-full bg-sky-500/10 blur-[110px]" />
+      <div className="absolute bottom-[-15%] left-[-10%] h-[480px] w-[480px] rounded-full bg-uplift-700/15 blur-[120px]" />
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div className="relative flex min-h-screen flex-col">
+      <AmbientGlow />
       <SkipLink />
       <Navbar />
       <main id="main-content" className="flex-1">

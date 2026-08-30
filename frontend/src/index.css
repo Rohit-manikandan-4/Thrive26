@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html {
@@ -11,28 +11,28 @@ html {
 }
 
 body {
-  @apply bg-gradient-to-b from-uplift-50 via-white to-sky-50 text-slate-800 antialiased;
+  @apply bg-slate-950 text-slate-200 antialiased;
   overflow-x: hidden;
 }
 
 .glass {
-  @apply bg-white/60 backdrop-blur-lg border border-white/70 shadow-glass;
+  @apply bg-slate-900/60 backdrop-blur-lg border border-white/10 shadow-glass;
 }
 
 .glass-strong {
-  @apply bg-white/80 backdrop-blur-xl border border-white/80 shadow-glass-lg;
+  @apply bg-slate-900/85 backdrop-blur-xl border border-white/10 shadow-glass-lg;
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-uplift-500 to-uplift-600 px-6 py-3 font-semibold text-white shadow-glass transition-transform hover:scale-[1.03] hover:shadow-glass-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-700 active:scale-95;
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-uplift-500 to-uplift-600 px-6 py-3 font-semibold text-white shadow-glow transition-transform hover:scale-[1.03] hover:shadow-glow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-400 active:scale-95;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-uplift-500 bg-white/70 px-6 py-3 font-semibold text-uplift-700 backdrop-blur transition-transform hover:scale-[1.03] hover:bg-uplift-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-700 active:scale-95;
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/15 bg-white/5 px-6 py-3 font-semibold text-slate-100 backdrop-blur transition-transform hover:scale-[1.03] hover:border-uplift-400/50 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-400 active:scale-95;
 }
 
 .focus-ring {
-  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-600;
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-uplift-400;
 }
 
 /* Accessibility: high contrast mode */
@@ -40,12 +40,13 @@ body {
   filter: contrast(1.25) saturate(1.1);
 }
 .high-contrast body {
-  background: #ffffff !important;
+  background: #000000 !important;
+  color: #ffffff !important;
 }
 .high-contrast .glass,
 .high-contrast .glass-strong {
-  background: #ffffff !important;
-  border-color: #000000 !important;
+  background: #000000 !important;
+  border-color: #ffffff !important;
 }
 .high-contrast * {
   text-shadow: none !important;
@@ -66,7 +67,7 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(46, 155, 112, 0.35);
+  background: rgba(79, 180, 137, 0.4);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-track {

@@ -110,9 +110,9 @@ export default function ChatWidget({ initialContext = null }) {
             exit={{ opacity: 0, y: 24, scale: 0.97 }}
             className="glass-strong fixed inset-x-3 bottom-3 z-50 flex h-[80vh] max-h-[640px] flex-col rounded-3xl sm:inset-auto sm:bottom-24 sm:right-6 sm:w-[400px]"
           >
-            <div className="flex items-center justify-between rounded-t-3xl border-b border-white/60 bg-white/70 px-5 py-4">
+            <div className="flex items-center justify-between rounded-t-3xl border-b border-white/10 bg-slate-900/70 px-5 py-4">
               <div>
-                <h2 className="flex items-center gap-1.5 text-base font-bold text-uplift-800">
+                <h2 className="flex items-center gap-1.5 text-base font-bold text-uplift-300">
                   <Sparkles size={18} /> {t('chat.title')}
                 </h2>
                 <p className="text-xs text-slate-500">{t('chat.subtitle')}</p>
@@ -123,7 +123,7 @@ export default function ChatWidget({ initialContext = null }) {
                   onClick={handleClear}
                   aria-label={t('chat.clear')}
                   title={t('chat.clear')}
-                  className="focus-ring rounded-full p-2 text-slate-500 hover:bg-slate-100"
+                  className="focus-ring rounded-full p-2 text-slate-400 hover:bg-white/10"
                 >
                   <Trash2 size={18} />
                 </button>
@@ -131,7 +131,7 @@ export default function ChatWidget({ initialContext = null }) {
                   type="button"
                   onClick={() => setOpen(false)}
                   aria-label={t('common.close')}
-                  className="focus-ring rounded-full p-2 text-slate-500 hover:bg-slate-100"
+                  className="focus-ring rounded-full p-2 text-slate-400 hover:bg-white/10"
                 >
                   <X size={18} />
                 </button>
@@ -140,13 +140,13 @@ export default function ChatWidget({ initialContext = null }) {
 
             <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
               {messages.length === 0 && (
-                <div className="rounded-2xl bg-uplift-50 p-4 text-sm text-uplift-900">{t('chat.greeting')}</div>
+                <div className="rounded-2xl border border-uplift-400/20 bg-uplift-500/10 p-4 text-sm text-uplift-200">{t('chat.greeting')}</div>
               )}
               {messages.map((m, i) => (
                 <ChatBubble key={i} role={m.role} text={m.text} onReadAloud={() => voice.speak(m.text)} canSpeak={voice.speechSynthesisSupported} />
               ))}
               {loading && (
-                <div className="flex items-center gap-2 rounded-2xl bg-white/80 px-4 py-3 text-sm text-slate-500">
+                <div className="flex items-center gap-2 rounded-2xl bg-white/5 px-4 py-3 text-sm text-slate-400">
                   <span className="flex gap-1">
                     <Dot /> <Dot delay="0.15s" /> <Dot delay="0.3s" />
                   </span>
@@ -154,18 +154,18 @@ export default function ChatWidget({ initialContext = null }) {
                 </div>
               )}
               {error && (
-                <div className="flex items-center justify-between gap-3 rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-700">
+                <div className="flex items-center justify-between gap-3 rounded-2xl bg-red-500/10 px-4 py-3 text-sm text-red-300">
                   <span>{error}</span>
                   <button
                     type="button"
                     onClick={() => handleSend(messages[messages.length - 1]?.text)}
-                    className="focus-ring flex items-center gap-1 rounded-full bg-red-100 px-3 py-1.5 font-semibold hover:bg-red-200"
+                    className="focus-ring flex items-center gap-1 rounded-full bg-red-500/20 px-3 py-1.5 font-semibold hover:bg-red-500/30"
                   >
                     <RotateCcw size={14} /> {t('chat.retry')}
                   </button>
                 </div>
               )}
-              {micError && <div className="rounded-2xl bg-amber-50 px-4 py-3 text-sm text-amber-800">{micError}</div>}
+              {micError && <div className="rounded-2xl bg-amber-500/10 px-4 py-3 text-sm text-amber-300">{micError}</div>}
             </div>
 
             <form
@@ -173,7 +173,7 @@ export default function ChatWidget({ initialContext = null }) {
                 e.preventDefault();
                 handleSend();
               }}
-              className="flex items-center gap-2 border-t border-white/60 bg-white/70 p-3"
+              className="flex items-center gap-2 border-t border-white/10 bg-slate-900/70 p-3"
             >
               <button
                 type="button"
@@ -181,7 +181,7 @@ export default function ChatWidget({ initialContext = null }) {
                 aria-label={t('chat.mic')}
                 title={t('chat.mic')}
                 className={`focus-ring flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition ${
-                  voice.isListening ? 'border-red-400 bg-red-50 text-red-600' : 'border-uplift-200 text-uplift-700 hover:bg-uplift-50'
+                  voice.isListening ? 'border-red-400/40 bg-red-500/10 text-red-400' : 'border-uplift-400/30 text-uplift-300 hover:bg-uplift-500/10'
                 }`}
               >
                 {voice.isListening ? <StopCircle size={18} /> : <Mic size={18} />}
@@ -195,7 +195,7 @@ export default function ChatWidget({ initialContext = null }) {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={t('chat.placeholder')}
-                className="focus-ring min-w-0 flex-1 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm"
+                className="focus-ring min-w-0 flex-1 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-slate-500"
               />
               <button
                 type="submit"
@@ -219,7 +219,7 @@ function ChatBubble({ role, text, onReadAloud, canSpeak }) {
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div
         className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
-          isUser ? 'bg-uplift-600 text-white' : 'bg-white/90 text-slate-700 shadow-sm'
+          isUser ? 'bg-uplift-600 text-white' : 'bg-white/10 text-slate-200'
         }`}
       >
         <p className="whitespace-pre-wrap">{text}</p>
@@ -227,7 +227,7 @@ function ChatBubble({ role, text, onReadAloud, canSpeak }) {
           <button
             type="button"
             onClick={onReadAloud}
-            className="focus-ring mt-1.5 flex items-center gap-1 text-xs font-medium text-uplift-600 hover:text-uplift-800"
+            className="focus-ring mt-1.5 flex items-center gap-1 text-xs font-medium text-uplift-400 hover:text-uplift-300"
           >
             <Volume2 size={13} /> Read aloud
           </button>

@@ -68,16 +68,16 @@ export default function Opportunities() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+        <h1 className="text-3xl font-extrabold text-white sm:text-4xl">
           {profile ? t('results.title') : t('nav.opportunities')}
         </h1>
-        <p className="mt-2 text-slate-600">{profile ? t('results.subtitle') : t('search.placeholder')}</p>
+        <p className="mt-2 text-slate-400">{profile ? t('results.subtitle') : t('search.placeholder')}</p>
       </div>
 
       {!profile && (
         <form onSubmit={handleSearchSubmit} className="mx-auto mb-6 max-w-2xl">
           <div className="glass flex items-center gap-2 rounded-full p-2">
-            <Search className="ml-2 shrink-0 text-slate-400" size={20} />
+            <Search className="ml-2 shrink-0 text-slate-500" size={20} />
             <label htmlFor="opp-search" className="sr-only">
               {t('search.placeholder')}
             </label>
@@ -87,10 +87,10 @@ export default function Opportunities() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={t('search.placeholder')}
-              className="min-w-0 flex-1 bg-transparent px-1 py-2 text-sm outline-none"
+              className="min-w-0 flex-1 bg-transparent px-1 py-2 text-sm text-white outline-none placeholder:text-slate-500"
             />
             {query && (
-              <button type="button" onClick={() => setQuery('')} aria-label="Clear search" className="focus-ring rounded-full p-1.5 text-slate-400 hover:bg-slate-100">
+              <button type="button" onClick={() => setQuery('')} aria-label="Clear search" className="focus-ring rounded-full p-1.5 text-slate-400 hover:bg-white/10">
                 <X size={16} />
               </button>
             )}
@@ -104,7 +104,7 @@ export default function Opportunities() {
                 key={ex}
                 type="button"
                 onClick={() => setQuery(ex)}
-                className="focus-ring rounded-full border border-slate-200 bg-white/70 px-3 py-1.5 text-xs text-slate-500 hover:border-uplift-300 hover:text-uplift-700"
+                className="focus-ring rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-slate-400 hover:border-uplift-400/40 hover:text-uplift-300"
               >
                 {ex}
               </button>
@@ -115,7 +115,7 @@ export default function Opportunities() {
 
       {/* Filters */}
       <div className="glass mb-8 flex flex-wrap items-center gap-3 rounded-3xl p-4">
-        <span className="flex items-center gap-1.5 text-sm font-bold text-slate-600">
+        <span className="flex items-center gap-1.5 text-sm font-bold text-slate-300">
           <SlidersHorizontal size={16} /> {t('filters.title')}
         </span>
         <FilterSelect
@@ -142,15 +142,15 @@ export default function Opportunities() {
         <button
           type="button"
           onClick={handleClearFilters}
-          className="focus-ring ml-auto rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-50"
+          className="focus-ring ml-auto rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-slate-300 hover:bg-white/5"
         >
           {t('filters.clear')}
         </button>
       </div>
 
       {(loadingPersonalized || searching) && (
-        <div className="flex items-center justify-center gap-3 py-16 text-slate-500">
-          <div className="h-6 w-6 animate-spin rounded-full border-4 border-uplift-200 border-t-uplift-600" />
+        <div className="flex items-center justify-center gap-3 py-16 text-slate-400">
+          <div className="h-6 w-6 animate-spin rounded-full border-4 border-uplift-500/20 border-t-uplift-500" />
           {t(profile ? 'onboarding.loading' : 'search.loading')}
         </div>
       )}
@@ -179,7 +179,7 @@ function FilterSelect({ label, value, onChange, options }) {
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="focus-ring rounded-full border border-slate-200 bg-white px-3 py-2 text-sm text-slate-600"
+        className="focus-ring rounded-full border border-white/15 bg-slate-900 px-3 py-2 text-sm text-slate-300"
         aria-label={label}
       >
         {options.map((o) => (
@@ -196,8 +196,8 @@ function EmptyState({ onClearFilters }) {
   const { t } = useLanguage();
   return (
     <div className="glass mx-auto max-w-xl rounded-3xl p-10 text-center">
-      <h3 className="text-xl font-bold text-slate-800">{t('results.empty.title')}</h3>
-      <p className="mt-2 text-sm text-slate-600">{t('results.empty.subtitle')}</p>
+      <h3 className="text-xl font-bold text-white">{t('results.empty.title')}</h3>
+      <p className="mt-2 text-sm text-slate-400">{t('results.empty.subtitle')}</p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <button type="button" onClick={onClearFilters} className="btn-secondary">
           {t('results.empty.removeFilter')}

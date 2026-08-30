@@ -43,8 +43,8 @@ export default function OpportunityDetails() {
 
   if (loading) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center gap-3 text-slate-500">
-        <div className="h-6 w-6 animate-spin rounded-full border-4 border-uplift-200 border-t-uplift-600" />
+      <div className="flex min-h-[60vh] items-center justify-center gap-3 text-slate-400">
+        <div className="h-6 w-6 animate-spin rounded-full border-4 border-uplift-500/20 border-t-uplift-500" />
         {t('details.loading')}
       </div>
     );
@@ -53,7 +53,7 @@ export default function OpportunityDetails() {
   if (!opportunity) {
     return (
       <div className="mx-auto max-w-xl px-4 py-20 text-center">
-        <h1 className="text-2xl font-bold text-slate-800">{t('results.empty.title')}</h1>
+        <h1 className="text-2xl font-bold text-white">{t('results.empty.title')}</h1>
         <Link to="/opportunities" className="btn-primary mt-6 inline-flex">
           {t('nav.opportunities')}
         </Link>
@@ -66,24 +66,24 @@ export default function OpportunityDetails() {
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className="focus-ring mb-6 flex items-center gap-1.5 text-sm font-semibold text-uplift-700 hover:underline"
+        className="focus-ring mb-6 flex items-center gap-1.5 text-sm font-semibold text-uplift-400 hover:underline"
       >
         <ArrowLeft size={16} /> {t('common.close')}
       </button>
 
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }} className="glass rounded-3xl p-6 sm:p-8">
         <div className="mb-3 flex flex-wrap items-center gap-2">
-          <span className="rounded-full bg-uplift-100 px-3 py-1 text-xs font-semibold text-uplift-800">
+          <span className="rounded-full border border-uplift-400/30 bg-uplift-500/10 px-3 py-1 text-xs font-semibold text-uplift-300">
             {t(`categories.${opportunity.category}`)}
           </span>
-          <span className="rounded-full bg-amber-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-amber-700">
+          <span className="rounded-full border border-amber-400/20 bg-amber-500/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-amber-300">
             {t('results.demoLabel')}
           </span>
         </div>
 
-        <h1 className="text-2xl font-extrabold text-slate-900 sm:text-3xl">{opportunity.title}</h1>
+        <h1 className="text-2xl font-extrabold text-white sm:text-3xl">{opportunity.title}</h1>
 
-        <div className="mt-3 flex flex-wrap gap-4 text-sm text-slate-500">
+        <div className="mt-3 flex flex-wrap gap-4 text-sm text-slate-400">
           <span className="flex items-center gap-1.5">
             <MapPin size={15} /> {opportunity.location.city}, {opportunity.location.state}
           </span>
@@ -92,24 +92,24 @@ export default function OpportunityDetails() {
           </span>
         </div>
 
-        <p className="mt-5 leading-relaxed text-slate-700">{simplified || opportunity.description}</p>
+        <p className="mt-5 leading-relaxed text-slate-300">{simplified || opportunity.description}</p>
 
         <div className="mt-3">
           <button
             type="button"
             onClick={handleSimplify}
             disabled={simplifying}
-            className="focus-ring flex items-center gap-1.5 text-sm font-semibold text-uplift-700 hover:underline disabled:opacity-50"
+            className="focus-ring flex items-center gap-1.5 text-sm font-semibold text-uplift-400 hover:underline disabled:opacity-50"
           >
             <Sparkles size={15} /> {simplifying ? t('details.simplifying') : t('details.simplify')}
           </button>
-          {simplifyError && <p className="mt-2 text-sm text-red-600">{simplifyError}</p>}
+          {simplifyError && <p className="mt-2 text-sm text-red-400">{simplifyError}</p>}
         </div>
 
         <Section icon={ListChecks} title={t('details.eligibility')}>
           <ul className="space-y-1.5">
             {opportunity.eligibility.map((e) => (
-              <li key={e} className="flex items-start gap-2 text-sm text-slate-600">
+              <li key={e} className="flex items-start gap-2 text-sm text-slate-400">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-uplift-500" /> {e}
               </li>
             ))}
@@ -117,13 +117,13 @@ export default function OpportunityDetails() {
         </Section>
 
         <Section icon={Sparkles} title={t('details.benefits')}>
-          <p className="text-sm text-slate-600">{opportunity.benefits}</p>
+          <p className="text-sm text-slate-400">{opportunity.benefits}</p>
         </Section>
 
         <Section icon={FileText} title={t('details.documents')}>
           <ul className="grid grid-cols-1 gap-1.5 sm:grid-cols-2">
             {opportunity.documents.map((d) => (
-              <li key={d} className="flex items-start gap-2 text-sm text-slate-600">
+              <li key={d} className="flex items-start gap-2 text-sm text-slate-400">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-uplift-500" /> {d}
               </li>
             ))}
@@ -133,8 +133,8 @@ export default function OpportunityDetails() {
         <Section icon={ListChecks} title={t('details.howToApply')}>
           <ol className="space-y-1.5">
             {t('details.steps').map((step, i) => (
-              <li key={step} className="flex items-start gap-2 text-sm text-slate-600">
-                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-uplift-100 text-xs font-bold text-uplift-700">
+              <li key={step} className="flex items-start gap-2 text-sm text-slate-400">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-uplift-500/10 text-xs font-bold text-uplift-300">
                   {i + 1}
                 </span>
                 {step}
@@ -143,7 +143,7 @@ export default function OpportunityDetails() {
           </ol>
         </Section>
 
-        <p className="mt-6 rounded-2xl bg-amber-50 p-4 text-xs text-amber-800">{t('details.demoNotice')}</p>
+        <p className="mt-6 rounded-2xl border border-amber-400/20 bg-amber-500/10 p-4 text-xs text-amber-300">{t('details.demoNotice')}</p>
 
         <button
           type="button"
@@ -160,9 +160,9 @@ export default function OpportunityDetails() {
 
 function Section({ icon: Icon, title, children }) {
   return (
-    <div className="mt-6 border-t border-slate-200/70 pt-6">
-      <h2 className="mb-3 flex items-center gap-2 text-base font-bold text-slate-800">
-        <Icon size={17} className="text-uplift-600" /> {title}
+    <div className="mt-6 border-t border-white/10 pt-6">
+      <h2 className="mb-3 flex items-center gap-2 text-base font-bold text-white">
+        <Icon size={17} className="text-uplift-400" /> {title}
       </h2>
       {children}
     </div>

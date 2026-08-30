@@ -25,8 +25,10 @@ export default {
         sans: ['"Inter"', '"Noto Sans"', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        glass: '0 8px 32px rgba(20, 60, 45, 0.12)',
-        'glass-lg': '0 20px 60px rgba(20, 60, 45, 0.18)',
+        glass: '0 8px 32px rgba(0, 0, 0, 0.35)',
+        'glass-lg': '0 20px 60px rgba(0, 0, 0, 0.55)',
+        glow: '0 0 24px rgba(79, 180, 137, 0.35)',
+        'glow-lg': '0 0 48px rgba(79, 180, 137, 0.45)',
       },
       backdropBlur: {
         xs: '2px',

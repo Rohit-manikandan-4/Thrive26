@@ -16,11 +16,11 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/40 bg-white/70 backdrop-blur-lg">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/70 backdrop-blur-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Main navigation">
         <Link to="/" className="focus-ring flex items-center gap-2 rounded-lg" onClick={() => setOpen(false)}>
           <Logo />
-          <span className="text-lg font-extrabold tracking-tight text-uplift-800">{t('brand')}</span>
+          <span className="text-lg font-extrabold tracking-tight text-white">{t('brand')}</span>
         </Link>
 
         <div className="hidden items-center gap-6 md:flex">
@@ -30,7 +30,7 @@ export default function Navbar() {
               to={l.to}
               className={({ isActive }) =>
                 `focus-ring rounded-md px-1 py-1 text-sm font-medium transition-colors ${
-                  isActive ? 'text-uplift-700' : 'text-slate-600 hover:text-uplift-700'
+                  isActive ? 'text-uplift-400' : 'text-slate-400 hover:text-uplift-300'
                 }`
               }
               end={l.to === '/'}
@@ -48,7 +48,7 @@ export default function Navbar() {
               e.preventDefault();
               document.getElementById('accessibility-panel-trigger')?.click();
             }}
-            className="focus-ring flex items-center gap-1.5 rounded-full border border-uplift-200 bg-white/70 px-3 py-2 text-sm font-medium text-uplift-800 hover:bg-white"
+            className="focus-ring flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/10"
           >
             <Accessibility size={16} />
             <span>{t('nav.accessibility')}</span>
@@ -57,7 +57,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="focus-ring rounded-md p-2 text-uplift-800 md:hidden"
+          className="focus-ring rounded-md p-2 text-slate-200 md:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
@@ -67,14 +67,14 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/40 bg-white/90 px-4 py-4 md:hidden">
+        <div className="border-t border-white/10 bg-slate-950/95 px-4 py-4 md:hidden">
           <div className="flex flex-col gap-3">
             {links.map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="focus-ring rounded-md px-2 py-2 text-base font-medium text-slate-700 hover:bg-uplift-50"
+                className="focus-ring rounded-md px-2 py-2 text-base font-medium text-slate-300 hover:bg-white/5"
                 end={l.to === '/'}
               >
                 {l.label}
