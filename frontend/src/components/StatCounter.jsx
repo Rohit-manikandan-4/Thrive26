@@ -9,8 +9,8 @@ export default function StatCounter({ value, label, index = 0 }) {
       transition={{ duration: 0.3, delay: index * 0.08 }}
       className="glass rounded-3xl px-4 py-8 text-center"
     >
-      <div className="text-3xl font-extrabold text-uplift-700 sm:text-4xl">{value}</div>
-      <div className="mt-1 text-sm font-medium text-slate-500">{label}</div>
+      <div className="text-3xl font-extrabold text-uplift-400 sm:text-4xl">{value}</div>
+      <div className="mt-1 text-sm font-medium text-slate-400">{label}</div>
     </motion.div>
   );
 }

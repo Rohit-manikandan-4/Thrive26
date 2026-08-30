@@ -25,7 +25,7 @@ export default function AccessibilityPanel() {
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
         aria-expanded={open}
-        className="focus-ring fixed bottom-24 left-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-white text-uplift-700 shadow-glass-lg transition hover:scale-105 sm:bottom-6"
+        className="focus-ring fixed bottom-24 left-4 z-40 flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-slate-900 text-uplift-300 shadow-glass-lg transition hover:scale-105 sm:bottom-6"
         aria-label={t('accessibility.title')}
       >
         <Accessibility size={26} />
@@ -34,7 +34,7 @@ export default function AccessibilityPanel() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-end justify-center bg-slate-900/40 p-0 sm:items-center sm:p-4"
+            className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 p-0 sm:items-center sm:p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -51,11 +51,11 @@ export default function AccessibilityPanel() {
               className="glass-strong w-full max-w-md rounded-t-3xl p-6 sm:rounded-3xl"
             >
               <div className="mb-4 flex items-center justify-between">
-                <h2 className="text-lg font-bold text-slate-800">{t('accessibility.title')}</h2>
+                <h2 className="text-lg font-bold text-white">{t('accessibility.title')}</h2>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="focus-ring rounded-full p-1.5 text-slate-500 hover:bg-slate-100"
+                  className="focus-ring rounded-full p-1.5 text-slate-400 hover:bg-white/10"
                   aria-label={t('accessibility.close')}
                 >
                   <X size={20} />
@@ -63,14 +63,14 @@ export default function AccessibilityPanel() {
               </div>
 
               <div className="space-y-3">
-                <div className="flex items-center justify-between rounded-2xl bg-white/70 p-3">
-                  <span className="text-sm font-medium">{t('accessibility.increaseText')} / {t('accessibility.decreaseText')}</span>
+                <div className="flex items-center justify-between rounded-2xl bg-white/5 p-3">
+                  <span className="text-sm font-medium text-slate-200">{t('accessibility.increaseText')} / {t('accessibility.decreaseText')}</span>
                   <div className="flex gap-2">
                     <button
                       type="button"
                       onClick={decreaseText}
                       aria-label={t('accessibility.decreaseText')}
-                      className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-uplift-200 hover:bg-uplift-50"
+                      className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-uplift-400/30 text-slate-200 hover:bg-uplift-500/10"
                     >
                       <Minus size={16} />
                     </button>
@@ -78,7 +78,7 @@ export default function AccessibilityPanel() {
                       type="button"
                       onClick={increaseText}
                       aria-label={t('accessibility.increaseText')}
-                      className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-uplift-200 hover:bg-uplift-50"
+                      className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-uplift-400/30 text-slate-200 hover:bg-uplift-500/10"
                     >
                       <Plus size={16} />
                     </button>
@@ -104,7 +104,7 @@ export default function AccessibilityPanel() {
                   onChange={toggleReadAloud}
                 />
 
-                <div className="flex items-center gap-2 rounded-2xl bg-white/70 p-3 text-sm text-slate-600">
+                <div className="flex items-center gap-2 rounded-2xl bg-white/5 p-3 text-sm text-slate-400">
                   <Keyboard size={18} className="shrink-0" />
                   <span>{t('accessibility.keyboardNav')}: Tab / Shift+Tab / Enter / Space</span>
                 </div>
@@ -112,7 +112,7 @@ export default function AccessibilityPanel() {
                 <button
                   type="button"
                   onClick={reset}
-                  className="focus-ring flex w-full items-center justify-center gap-2 rounded-full border border-slate-300 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-50"
+                  className="focus-ring flex w-full items-center justify-center gap-2 rounded-full border border-white/15 py-2.5 text-sm font-semibold text-slate-300 hover:bg-white/5"
                 >
                   <RotateCcw size={16} />
                   {t('accessibility.reset')}
@@ -128,8 +128,8 @@ export default function AccessibilityPanel() {
 
 function ToggleRow({ icon, label, checked, onChange }) {
   return (
-    <div className="flex items-center justify-between rounded-2xl bg-white/70 p-3">
-      <span className="flex items-center gap-2 text-sm font-medium">
+    <div className="flex items-center justify-between rounded-2xl bg-white/5 p-3">
+      <span className="flex items-center gap-2 text-sm font-medium text-slate-200">
         {icon}
         {label}
       </span>
@@ -138,7 +138,7 @@ function ToggleRow({ icon, label, checked, onChange }) {
         role="switch"
         aria-checked={checked}
         onClick={onChange}
-        className={`focus-ring relative h-6 w-11 rounded-full transition-colors ${checked ? 'bg-uplift-600' : 'bg-slate-300'}`}
+        className={`focus-ring relative h-6 w-11 rounded-full transition-colors ${checked ? 'bg-uplift-600' : 'bg-white/15'}`}
       >
         <span
           className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform ${

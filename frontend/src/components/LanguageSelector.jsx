@@ -25,7 +25,7 @@ export default function LanguageSelector() {
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label="Change language"
-        className="focus-ring flex items-center gap-1.5 rounded-full border border-uplift-200 bg-white/70 px-3 py-2 text-sm font-medium text-uplift-800 backdrop-blur transition hover:bg-white"
+        className="focus-ring flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-2 text-sm font-medium text-slate-200 backdrop-blur transition hover:bg-white/10"
       >
         <Globe size={16} />
         <span>{current?.native}</span>
@@ -45,12 +45,12 @@ export default function LanguageSelector() {
                   setLanguage(l.code);
                   setOpen(false);
                 }}
-                className="focus-ring flex w-full items-center justify-between px-4 py-2.5 text-left text-sm hover:bg-uplift-50"
+                className="focus-ring flex w-full items-center justify-between px-4 py-2.5 text-left text-sm text-slate-200 hover:bg-white/10"
               >
                 <span>
-                  {l.native} {l.code !== 'en' && <span className="text-xs text-slate-400">({l.label})</span>}
+                  {l.native} {l.code !== 'en' && <span className="text-xs text-slate-500">({l.label})</span>}
                 </span>
-                {l.code === language && <Check size={15} className="text-uplift-600" />}
+                {l.code === language && <Check size={15} className="text-uplift-400" />}
               </button>
             </li>
           ))}
