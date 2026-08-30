@@ -1,0 +1,538 @@
+// UpliftAI translations for English, Tamil, Hindi, Telugu and Kannada.
+// Native scripts only — no transliteration.
+
+export const LANGUAGES = [
+  { code: 'en', label: 'English', native: 'English' },
+  { code: 'ta', label: 'Tamil', native: 'தமிழ்' },
+  { code: 'hi', label: 'Hindi', native: 'हिंदी' },
+  { code: 'te', label: 'Telugu', native: 'తెలుగు' },
+  { code: 'kn', label: 'Kannada', native: 'ಕನ್ನಡ' },
+];
+
+const en = {
+  brand: 'UpliftAI',
+  tagline: 'Opportunities in your language. A better future within reach.',
+  nav: {
+    home: 'Home',
+    opportunities: 'Opportunities',
+    about: 'About',
+    accessibility: 'Accessibility',
+  },
+  hero: {
+    headline: 'Your Opportunity Starts Here.',
+    subheading:
+      'Find scholarships, jobs, skills, government schemes and financial support — in a language you understand.',
+    primaryCta: 'Find My Opportunities',
+    secondaryCta: 'Explore Opportunities',
+  },
+  quickAccess: {
+    title: 'Explore by Category',
+    subtitle: 'Pick a category to jump straight to relevant opportunities.',
+    education: { title: 'Education', desc: 'Find scholarships and educational opportunities.' },
+    jobs: { title: 'Jobs', desc: 'Discover suitable employment opportunities.' },
+    skills: { title: 'Skills', desc: 'Find free and affordable skill-development programs.' },
+    financial: { title: 'Financial Support', desc: 'Discover financial assistance opportunities.' },
+    government: { title: 'Government Schemes', desc: 'Explore relevant government support.' },
+    internships: { title: 'Internships', desc: 'Find internships and beginner opportunities.' },
+    cta: 'Explore',
+  },
+  onboarding: {
+    title: 'Let’s personalize your search',
+    stepLabel: 'Step {current} of {total}',
+    back: 'Back',
+    next: 'Next',
+    finish: 'Show My Opportunities',
+    loading: 'Personalizing your results…',
+    step1: {
+      title: 'What are you looking for?',
+      options: {
+        education: 'Education',
+        job: 'Job',
+        skill: 'Skill development',
+        government: 'Government scheme',
+        financial: 'Financial assistance',
+        internship: 'Internship',
+      },
+    },
+    step2: {
+      title: 'What is your education level?',
+      options: {
+        below10: 'Below 10th',
+        tenth: '10th',
+        twelfth: '12th',
+        diploma: 'Diploma',
+        undergraduate: 'Undergraduate',
+        graduate: 'Graduate',
+      },
+    },
+    step3: {
+      title: 'What are you interested in?',
+      options: {
+        technology: 'Technology',
+        business: 'Business',
+        agriculture: 'Agriculture',
+        healthcare: 'Healthcare',
+        design: 'Design',
+        government_jobs: 'Government jobs',
+        skilled_trades: 'Skilled trades',
+        other: 'Other',
+      },
+    },
+    step4: {
+      title: 'Where are you located?',
+      state: 'State',
+      city: 'City / District',
+      statePlaceholder: 'e.g. Tamil Nadu',
+      cityPlaceholder: 'e.g. Coimbatore',
+    },
+  },
+  results: {
+    title: 'Opportunities For You',
+    subtitle: 'Based on what you told us, here are opportunities that may fit you.',
+    match: 'Match',
+    viewDetails: 'View Details',
+    benefit: 'Benefit',
+    deadline: 'Deadline',
+    location: 'Location',
+    demoLabel: 'DEMO DATA',
+    empty: {
+      title: 'We couldn’t find an exact match.',
+      subtitle: 'Try one of these to see more opportunities:',
+      changeEducation: 'Change education level',
+      changeLocation: 'Change location',
+      removeFilter: 'Remove a filter',
+      tryAnotherSearch: 'Try another search',
+      askAI: 'Ask UpliftAI',
+    },
+  },
+  search: {
+    placeholder: 'What opportunity are you looking for?',
+    button: 'Search',
+    loading: 'Finding opportunities…',
+    examples: [
+      'Scholarships for college students',
+      'Free coding courses',
+      'Government schemes',
+      'Jobs for 12th pass students',
+      'Skill courses near me',
+    ],
+  },
+  filters: {
+    title: 'Filters',
+    category: 'Category',
+    education: 'Education level',
+    location: 'Location',
+    eligibility: 'Eligibility',
+    deadline: 'Deadline',
+    type: 'Opportunity type',
+    all: 'All',
+    clear: 'Clear Filters',
+  },
+  categories: {
+    scholarship: 'Scholarship',
+    job: 'Job',
+    internship: 'Internship',
+    skill: 'Skill course',
+    government: 'Government scheme',
+    financial: 'Financial assistance',
+  },
+  details: {
+    eligibility: 'Eligibility',
+    benefits: 'Benefits',
+    documents: 'Documents Required',
+    howToApply: 'How to Apply',
+    apply: 'Apply / Official Website',
+    demoNotice: 'This is prototype demo data for demonstration purposes. It is not an official opportunity listing.',
+    simplify: 'Simplify this',
+    simplifying: 'Simplifying…',
+    loading: 'Loading opportunity…',
+    steps: [
+      'Check eligibility',
+      'Prepare documents',
+      'Visit official application portal',
+      'Submit application',
+      'Track status',
+    ],
+  },
+  chat: {
+    launcher: 'Ask UpliftAI',
+    title: 'UpliftAI Assistant',
+    subtitle: 'Powered by Google Gemini',
+    placeholder: 'Type your question…',
+    send: 'Send',
+    thinking: 'UpliftAI is thinking…',
+    clear: 'Clear Chat',
+    mic: 'Speak your question',
+    micUnsupported: "Voice input isn't supported in this browser. Please type your question.",
+    readAloud: 'Read aloud',
+    error: 'UpliftAI is temporarily unavailable. Please try again.',
+    retry: 'Retry',
+    greeting:
+      "Hi! I'm UpliftAI. Ask me about scholarships, jobs, skills or government schemes — I'll explain things simply and in your language.",
+  },
+  accessibility: {
+    title: 'Accessibility',
+    increaseText: 'Increase text size',
+    decreaseText: 'Decrease text size',
+    highContrast: 'High contrast',
+    reduceMotion: 'Reduce motion',
+    readAloud: 'Read aloud mode',
+    keyboardNav: 'Keyboard navigation guide',
+    reset: 'Reset accessibility settings',
+    close: 'Close',
+  },
+  trust: {
+    title: 'Information You Can Trust',
+    points: [
+      'UpliftAI helps users discover opportunities.',
+      'Users should verify important information on official websites before applying.',
+      'UpliftAI does not guarantee eligibility.',
+      'Demo opportunities are clearly labeled.',
+      'Users should check deadlines before applying.',
+      'We never request unnecessary sensitive information.',
+    ],
+  },
+  impact: {
+    title: 'Breaking the Opportunity Barrier',
+    cards: {
+      economic: { title: 'Economic Inclusion', desc: 'Make opportunities easier to discover.' },
+      language: { title: 'Language Inclusion', desc: 'Give users information in languages they understand.' },
+      matching: { title: 'Opportunity Matching', desc: 'Help users find relevant opportunities faster.' },
+    },
+  },
+  stats: {
+    title: 'Prototype / Demo Statistics',
+    items: [
+      { value: '10,000+', label: 'Demo Opportunities' },
+      { value: '5', label: 'Indian Languages' },
+      { value: '1', label: 'Inclusive Platform' },
+      { value: '∞', label: 'Possibilities' },
+    ],
+  },
+  footer: {
+    tagline: 'Making opportunities accessible to everyone.',
+    links: { home: 'Home', opportunities: 'Opportunities', accessibility: 'Accessibility', languages: 'Languages', about: 'About' },
+    copyright: '© 2026 UpliftAI',
+    team: 'BY TEAM AXINO',
+  },
+  common: {
+    loading: 'Loading…',
+    error: 'Something went wrong. Please try again.',
+    close: 'Close',
+  },
+};
+
+const ta = {
+  brand: 'UpliftAI',
+  tagline: 'உங்கள் மொழியில் வாய்ப்புகள். சிறந்த எதிர்காலம் கைக்கு எட்டும் தூரத்தில்.',
+  nav: { home: 'முகப்பு', opportunities: 'வாய்ப்புகள்', about: 'எங்களைப் பற்றி', accessibility: 'அணுகல்தன்மை' },
+  hero: {
+    headline: 'உங்கள் வாய்ப்பு இங்கே தொடங்குகிறது.',
+    subheading: 'உதவித்தொகைகள், வேலைகள், திறன்கள், அரசு திட்டங்கள் மற்றும் நிதி உதவியை — நீங்கள் புரிந்துகொள்ளும் மொழியில் கண்டறியுங்கள்.',
+    primaryCta: 'எனக்கான வாய்ப்புகளைக் கண்டறி',
+    secondaryCta: 'வாய்ப்புகளை ஆராயுங்கள்',
+  },
+  quickAccess: {
+    title: 'வகைப்படி ஆராயுங்கள்',
+    subtitle: 'தொடர்புடைய வாய்ப்புகளுக்கு நேரடியாகச் செல்ல ஒரு வகையைத் தேர்ந்தெடுக்கவும்.',
+    education: { title: 'கல்வி', desc: 'உதவித்தொகைகள் மற்றும் கல்வி வாய்ப்புகளைக் கண்டறியுங்கள்.' },
+    jobs: { title: 'வேலைகள்', desc: 'பொருத்தமான வேலை வாய்ப்புகளைக் கண்டறியுங்கள்.' },
+    skills: { title: 'திறன்கள்', desc: 'இலவச மற்றும் மலிவு விலை திறன் மேம்பாட்டு திட்டங்களைக் கண்டறியுங்கள்.' },
+    financial: { title: 'நிதி உதவி', desc: 'நிதி உதவி வாய்ப்புகளைக் கண்டறியுங்கள்.' },
+    government: { title: 'அரசு திட்டங்கள்', desc: 'தொடர்புடைய அரசு ஆதரவை ஆராயுங்கள்.' },
+    internships: { title: 'இன்டர்ன்ஷிப்கள்', desc: 'இன்டர்ன்ஷிப் மற்றும் ஆரம்ப நிலை வாய்ப்புகளைக் கண்டறியுங்கள்.' },
+    cta: 'ஆராயுங்கள்',
+  },
+  onboarding: {
+    title: 'உங்கள் தேடலை தனிப்பயனாக்குவோம்',
+    stepLabel: 'படி {current} / {total}',
+    back: 'பின்செல்',
+    next: 'அடுத்து',
+    finish: 'எனது வாய்ப்புகளைக் காட்டு',
+    loading: 'உங்கள் முடிவுகளைத் தனிப்பயனாக்குகிறோம்…',
+    step1: {
+      title: 'நீங்கள் எதைத் தேடுகிறீர்கள்?',
+      options: { education: 'கல்வி', job: 'வேலை', skill: 'திறன் மேம்பாடு', government: 'அரசு திட்டம்', financial: 'நிதி உதவி', internship: 'இன்டர்ன்ஷிப்' },
+    },
+    step2: {
+      title: 'உங்கள் கல்வித் தகுதி என்ன?',
+      options: { below10: '10ஆம் வகுப்புக்கு கீழ்', tenth: '10ஆம் வகுப்பு', twelfth: '12ஆம் வகுப்பு', diploma: 'டிப்ளோமா', undergraduate: 'இளங்கலை', graduate: 'முதுகலை' },
+    },
+    step3: {
+      title: 'உங்களுக்கு எதில் ஆர்வம் உள்ளது?',
+      options: { technology: 'தொழில்நுட்பம்', business: 'வணிகம்', agriculture: 'விவசாயம்', healthcare: 'சுகாதாரம்', design: 'வடிவமைப்பு', government_jobs: 'அரசு வேலைகள்', skilled_trades: 'திறன் சார் தொழில்கள்', other: 'மற்றவை' },
+    },
+    step4: {
+      title: 'நீங்கள் எங்கு வசிக்கிறீர்கள்?',
+      state: 'மாநிலம்',
+      city: 'நகரம் / மாவட்டம்',
+      statePlaceholder: 'எ.கா. தமிழ்நாடு',
+      cityPlaceholder: 'எ.கா. கோயம்புத்தூர்',
+    },
+  },
+  results: {
+    title: 'உங்களுக்கான வாய்ப்புகள்',
+    subtitle: 'நீங்கள் கூறியதன் அடிப்படையில், உங்களுக்குப் பொருந்தக்கூடிய வாய்ப்புகள் இதோ.',
+    match: 'பொருத்தம்',
+    viewDetails: 'விவரங்களைப் பார்க்க',
+    benefit: 'பலன்',
+    deadline: 'கடைசி தேதி',
+    location: 'இடம்',
+    demoLabel: 'மாதிரி தரவு',
+    empty: {
+      title: 'சரியான பொருத்தத்தை கண்டறிய முடியவில்லை.',
+      subtitle: 'மேலும் வாய்ப்புகளைக் காண இவற்றில் ஒன்றை முயற்சிக்கவும்:',
+      changeEducation: 'கல்வித் தகுதியை மாற்று',
+      changeLocation: 'இடத்தை மாற்று',
+      removeFilter: 'வடிகட்டியை நீக்கு',
+      tryAnotherSearch: 'வேறு தேடலை முயற்சி',
+      askAI: 'UpliftAI-யிடம் கேளுங்கள்',
+    },
+  },
+  search: {
+    placeholder: 'நீங்கள் எந்த வாய்ப்பைத் தேடுகிறீர்கள்?',
+    button: 'தேடு',
+    loading: 'வாய்ப்புகளைக் கண்டறிகிறோம்…',
+    examples: ['கல்லூரி மாணவர்களுக்கான உதவித்தொகைகள்', 'இலவச கோடிங் படிப்புகள்', 'அரசு திட்டங்கள்', '12ஆம் வகுப்பு முடித்தவர்களுக்கான வேலைகள்', 'அருகிலுள்ள திறன் படிப்புகள்'],
+  },
+  filters: {
+    title: 'வடிகட்டிகள்', category: 'வகை', education: 'கல்வித் தகுதி', location: 'இடம்', eligibility: 'தகுதி', deadline: 'கடைசி தேதி', type: 'வாய்ப்பு வகை', all: 'அனைத்தும்', clear: 'வடிகட்டிகளை அழி',
+  },
+  categories: { scholarship: 'உதவித்தொகை', job: 'வேலை', internship: 'இன்டர்ன்ஷிப்', skill: 'திறன் படிப்பு', government: 'அரசு திட்டம்', financial: 'நிதி உதவி' },
+  details: {
+    eligibility: 'தகுதி', benefits: 'பலன்கள்', documents: 'தேவையான ஆவணங்கள்', howToApply: 'விண்ணப்பிப்பது எப்படி', apply: 'விண்ணப்பி / அதிகாரப்பூர்வ இணையதளம்',
+    demoNotice: 'இது ஒரு முன்மாதிரி மாதிரி தரவு, நிரூபண நோக்கத்திற்காக மட்டுமே. இது ஒரு அதிகாரப்பூர்வ வாய்ப்பு பட்டியல் அல்ல.',
+    simplify: 'எளிமையாக்கு', simplifying: 'எளிமையாக்குகிறது…', loading: 'வாய்ப்பு ஏற்றப்படுகிறது…',
+    steps: ['தகுதியைச் சரிபார்க்கவும்', 'ஆவணங்களைத் தயார் செய்யவும்', 'அதிகாரப்பூர்வ விண்ணப்ப போர்ட்டலைப் பார்வையிடவும்', 'விண்ணப்பத்தைச் சமர்ப்பிக்கவும்', 'நிலையைக் கண்காணிக்கவும்'],
+  },
+  chat: {
+    launcher: 'UpliftAI-யிடம் கேளுங்கள்', title: 'UpliftAI உதவியாளர்', subtitle: 'Google Gemini மூலம் இயங்குகிறது', placeholder: 'உங்கள் கேள்வியை தட்டச்சு செய்யவும்…', send: 'அனுப்பு', thinking: 'UpliftAI யோசிக்கிறது…', clear: 'அரட்டையை அழி', mic: 'உங்கள் கேள்வியைப் பேசுங்கள்', micUnsupported: 'இந்த உலாவியில் குரல் உள்ளீடு ஆதரிக்கப்படவில்லை. தயவுசெய்து தட்டச்சு செய்யவும்.', readAloud: 'சத்தமாக படிக்க', error: 'UpliftAI தற்காலிகமாகக் கிடைக்கவில்லை. மீண்டும் முயற்சிக்கவும்.', retry: 'மீண்டும் முயற்சி', greeting: 'வணக்கம்! நான் UpliftAI. உதவித்தொகைகள், வேலைகள், திறன்கள் அல்லது அரசு திட்டங்கள் பற்றி என்னிடம் கேளுங்கள் — நான் அவற்றை எளிமையாகவும் உங்கள் மொழியிலும் விளக்குகிறேன்.',
+  },
+  accessibility: {
+    title: 'அணுகல்தன்மை', increaseText: 'எழுத்து அளவை அதிகரி', decreaseText: 'எழுத்து அளவைக் குறை', highContrast: 'அதிக மாறுபாடு', reduceMotion: 'அசைவைக் குறை', readAloud: 'சத்தமாகப் படிக்கும் பயன்முறை', keyboardNav: 'விசைப்பலகை வழிசெலுத்தல் வழிகாட்டி', reset: 'அணுகல்தன்மை அமைப்புகளை மீட்டமை', close: 'மூடு',
+  },
+  trust: {
+    title: 'நம்பகமான தகவல்',
+    points: ['UpliftAI பயனர்கள் வாய்ப்புகளைக் கண்டறிய உதவுகிறது.', 'விண்ணப்பிக்கும் முன் அதிகாரப்பூர்வ இணையதளங்களில் முக்கிய தகவல்களைச் சரிபார்க்கவும்.', 'UpliftAI தகுதியை உறுதி செய்யாது.', 'மாதிரி வாய்ப்புகள் தெளிவாக குறிக்கப்பட்டுள்ளன.', 'விண்ணப்பிக்கும் முன் கடைசி தேதிகளைச் சரிபார்க்கவும்.', 'தேவையற்ற முக்கியமான தகவல்களை நாங்கள் ஒருபோதும் கேட்க மாட்டோம்.'],
+  },
+  impact: {
+    title: 'வாய்ப்புத் தடையை உடைத்தல்',
+    cards: { economic: { title: 'பொருளாதார உள்ளடக்கம்', desc: 'வாய்ப்புகளைக் கண்டறிவதை எளிதாக்குதல்.' }, language: { title: 'மொழி உள்ளடக்கம்', desc: 'பயனர்கள் புரிந்துகொள்ளும் மொழிகளில் தகவல்களை வழங்குதல்.' }, matching: { title: 'வாய்ப்பு பொருத்தம்', desc: 'பயனர்கள் தொடர்புடைய வாய்ப்புகளை வேகமாகக் கண்டறிய உதவுதல்.' } },
+  },
+  stats: { title: 'முன்மாதிரி / மாதிரி புள்ளிவிவரங்கள்', items: [{ value: '10,000+', label: 'மாதிரி வாய்ப்புகள்' }, { value: '5', label: 'இந்திய மொழிகள்' }, { value: '1', label: 'உள்ளடக்கிய தளம்' }, { value: '∞', label: 'சாத்தியங்கள்' }] },
+  footer: { tagline: 'அனைவருக்கும் வாய்ப்புகளை அணுகக்கூடியதாக மாற்றுதல்.', links: { home: 'முகப்பு', opportunities: 'வாய்ப்புகள்', accessibility: 'அணுகல்தன்மை', languages: 'மொழிகள்', about: 'எங்களைப் பற்றி' }, copyright: '© 2026 UpliftAI', team: 'BY TEAM AXINO' },
+  common: { loading: 'ஏற்றுகிறது…', error: 'ஏதோ தவறு நடந்தது. மீண்டும் முயற்சிக்கவும்.', close: 'மூடு' },
+};
+
+const hi = {
+  brand: 'UpliftAI',
+  tagline: 'आपकी भाषा में अवसर। एक बेहतर भविष्य अब पहुंच में।',
+  nav: { home: 'होम', opportunities: 'अवसर', about: 'हमारे बारे में', accessibility: 'सुगम्यता' },
+  hero: {
+    headline: 'आपका अवसर यहीं से शुरू होता है।',
+    subheading: 'छात्रवृत्ति, नौकरियां, कौशल, सरकारी योजनाएं और वित्तीय सहायता — उस भाषा में खोजें जिसे आप समझते हैं।',
+    primaryCta: 'मेरे अवसर खोजें',
+    secondaryCta: 'अवसर देखें',
+  },
+  quickAccess: {
+    title: 'श्रेणी के अनुसार खोजें',
+    subtitle: 'संबंधित अवसरों तक सीधे पहुंचने के लिए एक श्रेणी चुनें।',
+    education: { title: 'शिक्षा', desc: 'छात्रवृत्ति और शैक्षिक अवसर खोजें।' },
+    jobs: { title: 'नौकरियां', desc: 'उपयुक्त रोजगार के अवसर खोजें।' },
+    skills: { title: 'कौशल', desc: 'मुफ्त और सस्ती कौशल-विकास योजनाएं खोजें।' },
+    financial: { title: 'वित्तीय सहायता', desc: 'वित्तीय सहायता के अवसर खोजें।' },
+    government: { title: 'सरकारी योजनाएं', desc: 'प्रासंगिक सरकारी सहायता देखें।' },
+    internships: { title: 'इंटर्नशिप', desc: 'इंटर्नशिप और शुरुआती अवसर खोजें।' },
+    cta: 'देखें',
+  },
+  onboarding: {
+    title: 'चलिए आपकी खोज को व्यक्तिगत बनाते हैं',
+    stepLabel: 'चरण {current} / {total}',
+    back: 'पीछे',
+    next: 'आगे',
+    finish: 'मेरे अवसर दिखाएं',
+    loading: 'आपके परिणामों को व्यक्तिगत बनाया जा रहा है…',
+    step1: { title: 'आप क्या ढूंढ रहे हैं?', options: { education: 'शिक्षा', job: 'नौकरी', skill: 'कौशल विकास', government: 'सरकारी योजना', financial: 'वित्तीय सहायता', internship: 'इंटर्नशिप' } },
+    step2: { title: 'आपकी शिक्षा का स्तर क्या है?', options: { below10: '10वीं से नीचे', tenth: '10वीं', twelfth: '12वीं', diploma: 'डिप्लोमा', undergraduate: 'स्नातक', graduate: 'स्नातकोत्तर' } },
+    step3: { title: 'आपकी रुचि किसमें है?', options: { technology: 'प्रौद्योगिकी', business: 'व्यवसाय', agriculture: 'कृषि', healthcare: 'स्वास्थ्य सेवा', design: 'डिज़ाइन', government_jobs: 'सरकारी नौकरियां', skilled_trades: 'कुशल व्यापार', other: 'अन्य' } },
+    step4: { title: 'आप कहां रहते हैं?', state: 'राज्य', city: 'शहर / जिला', statePlaceholder: 'उदा. तमिलनाडु', cityPlaceholder: 'उदा. कोयंबटूर' },
+  },
+  results: {
+    title: 'आपके लिए अवसर',
+    subtitle: 'आपने जो बताया उसके आधार पर, यहां ऐसे अवसर हैं जो आपके अनुकूल हो सकते हैं।',
+    match: 'मिलान',
+    viewDetails: 'विवरण देखें',
+    benefit: 'लाभ',
+    deadline: 'अंतिम तिथि',
+    location: 'स्थान',
+    demoLabel: 'डेमो डेटा',
+    empty: { title: 'हमें सटीक मिलान नहीं मिला।', subtitle: 'अधिक अवसर देखने के लिए इनमें से एक आज़माएं:', changeEducation: 'शिक्षा स्तर बदलें', changeLocation: 'स्थान बदलें', removeFilter: 'फ़िल्टर हटाएं', tryAnotherSearch: 'दूसरी खोज आज़माएं', askAI: 'UpliftAI से पूछें' },
+  },
+  search: { placeholder: 'आप किस अवसर की तलाश कर रहे हैं?', button: 'खोजें', loading: 'अवसर खोजे जा रहे हैं…', examples: ['कॉलेज छात्रों के लिए छात्रवृत्ति', 'मुफ्त कोडिंग कोर्स', 'सरकारी योजनाएं', '12वीं पास छात्रों के लिए नौकरियां', 'आस-पास के कौशल कोर्स'] },
+  filters: { title: 'फ़िल्टर', category: 'श्रेणी', education: 'शिक्षा स्तर', location: 'स्थान', eligibility: 'पात्रता', deadline: 'अंतिम तिथि', type: 'अवसर प्रकार', all: 'सभी', clear: 'फ़िल्टर साफ़ करें' },
+  categories: { scholarship: 'छात्रवृत्ति', job: 'नौकरी', internship: 'इंटर्नशिप', skill: 'कौशल कोर्स', government: 'सरकारी योजना', financial: 'वित्तीय सहायता' },
+  details: {
+    eligibility: 'पात्रता', benefits: 'लाभ', documents: 'आवश्यक दस्तावेज़', howToApply: 'आवेदन कैसे करें', apply: 'आवेदन करें / आधिकारिक वेबसाइट',
+    demoNotice: 'यह प्रदर्शन उद्देश्यों के लिए प्रोटोटाइप डेमो डेटा है। यह एक आधिकारिक अवसर सूची नहीं है।',
+    simplify: 'इसे सरल बनाएं', simplifying: 'सरल बनाया जा रहा है…', loading: 'अवसर लोड हो रहा है…',
+    steps: ['पात्रता जांचें', 'दस्तावेज़ तैयार करें', 'आधिकारिक आवेदन पोर्टल पर जाएं', 'आवेदन जमा करें', 'स्थिति ट्रैक करें'],
+  },
+  chat: {
+    launcher: 'UpliftAI से पूछें', title: 'UpliftAI सहायक', subtitle: 'Google Gemini द्वारा संचालित', placeholder: 'अपना प्रश्न टाइप करें…', send: 'भेजें', thinking: 'UpliftAI सोच रहा है…', clear: 'चैट साफ़ करें', mic: 'अपना प्रश्न बोलें', micUnsupported: 'इस ब्राउज़र में वॉइस इनपुट समर्थित नहीं है। कृपया टाइप करें।', readAloud: 'ज़ोर से पढ़ें', error: 'UpliftAI अस्थायी रूप से अनुपलब्ध है। कृपया पुनः प्रयास करें।', retry: 'पुनः प्रयास करें', greeting: 'नमस्ते! मैं UpliftAI हूं। छात्रवृत्ति, नौकरियों, कौशल या सरकारी योजनाओं के बारे में मुझसे पूछें — मैं इन्हें सरल भाषा में और आपकी भाषा में समझाऊंगा।',
+  },
+  accessibility: { title: 'सुगम्यता', increaseText: 'टेक्स्ट का आकार बढ़ाएं', decreaseText: 'टेक्स्ट का आकार घटाएं', highContrast: 'उच्च कंट्रास्ट', reduceMotion: 'गति कम करें', readAloud: 'ज़ोर से पढ़ने का मोड', keyboardNav: 'कीबोर्ड नेविगेशन गाइड', reset: 'सुगम्यता सेटिंग्स रीसेट करें', close: 'बंद करें' },
+  trust: { title: 'विश्वसनीय जानकारी', points: ['UpliftAI उपयोगकर्ताओं को अवसर खोजने में मदद करता है।', 'आवेदन करने से पहले आधिकारिक वेबसाइटों पर महत्वपूर्ण जानकारी सत्यापित करें।', 'UpliftAI पात्रता की गारंटी नहीं देता।', 'डेमो अवसर स्पष्ट रूप से चिह्नित हैं।', 'आवेदन करने से पहले अंतिम तिथियां जांचें।', 'हम कभी भी अनावश्यक संवेदनशील जानकारी नहीं मांगते।'] },
+  impact: { title: 'अवसर की बाधा को तोड़ना', cards: { economic: { title: 'आर्थिक समावेशन', desc: 'अवसरों को खोजना आसान बनाना।' }, language: { title: 'भाषा समावेशन', desc: 'उपयोगकर्ताओं को उनकी समझ वाली भाषाओं में जानकारी देना।' }, matching: { title: 'अवसर मिलान', desc: 'उपयोगकर्ताओं को प्रासंगिक अवसर तेज़ी से खोजने में मदद करना।' } } },
+  stats: { title: 'प्रोटोटाइप / डेमो आँकड़े', items: [{ value: '10,000+', label: 'डेमो अवसर' }, { value: '5', label: 'भारतीय भाषाएं' }, { value: '1', label: 'समावेशी मंच' }, { value: '∞', label: 'संभावनाएं' }] },
+  footer: { tagline: 'सभी के लिए अवसरों को सुलभ बनाना।', links: { home: 'होम', opportunities: 'अवसर', accessibility: 'सुगम्यता', languages: 'भाषाएं', about: 'हमारे बारे में' }, copyright: '© 2026 UpliftAI', team: 'BY TEAM AXINO' },
+  common: { loading: 'लोड हो रहा है…', error: 'कुछ गलत हो गया। कृपया पुनः प्रयास करें।', close: 'बंद करें' },
+};
+
+const te = {
+  brand: 'UpliftAI',
+  tagline: 'మీ భాషలో అవకాశాలు. మెరుగైన భవిష్యత్తు అందుబాటులో.',
+  nav: { home: 'హోమ్', opportunities: 'అవకాశాలు', about: 'మా గురించి', accessibility: 'ప్రాప్యత' },
+  hero: {
+    headline: 'మీ అవకాశం ఇక్కడ ప్రారంభమవుతుంది.',
+    subheading: 'స్కాలర్‌షిప్‌లు, ఉద్యోగాలు, నైపుణ్యాలు, ప్రభుత్వ పథకాలు మరియు ఆర్థిక సహాయాన్ని — మీకు అర్థమయ్యే భాషలో కనుగొనండి.',
+    primaryCta: 'నా అవకాశాలను కనుగొనండి',
+    secondaryCta: 'అవకాశాలను అన్వేషించండి',
+  },
+  quickAccess: {
+    title: 'వర్గం వారీగా అన్వేషించండి',
+    subtitle: 'సంబంధిత అవకాశాలకు నేరుగా వెళ్లడానికి ఒక వర్గాన్ని ఎంచుకోండి.',
+    education: { title: 'విద్య', desc: 'స్కాలర్‌షిప్‌లు మరియు విద్యా అవకాశాలను కనుగొనండి.' },
+    jobs: { title: 'ఉద్యోగాలు', desc: 'తగిన ఉద్యోగ అవకాశాలను కనుగొనండి.' },
+    skills: { title: 'నైపుణ్యాలు', desc: 'ఉచిత మరియు తక్కువ ఖర్చుతో కూడిన నైపుణ్య అభివృద్ధి కార్యక్రమాలను కనుగొనండి.' },
+    financial: { title: 'ఆర్థిక సహాయం', desc: 'ఆర్థిక సహాయ అవకాశాలను కనుగొనండి.' },
+    government: { title: 'ప్రభుత్వ పథకాలు', desc: 'సంబంధిత ప్రభుత్వ మద్దతును అన్వేషించండి.' },
+    internships: { title: 'ఇంటర్న్‌షిప్‌లు', desc: 'ఇంటర్న్‌షిప్‌లు మరియు ప్రారంభ అవకాశాలను కనుగొనండి.' },
+    cta: 'అన్వేషించండి',
+  },
+  onboarding: {
+    title: 'మీ శోధనను వ్యక్తిగతీకరిద్దాం',
+    stepLabel: 'దశ {current} / {total}',
+    back: 'వెనుకకు',
+    next: 'తదుపరి',
+    finish: 'నా అవకాశాలను చూపించు',
+    loading: 'మీ ఫలితాలను వ్యక్తిగతీకరిస్తున్నాము…',
+    step1: { title: 'మీరు ఏమి వెతుకుతున్నారు?', options: { education: 'విద్య', job: 'ఉద్యోగం', skill: 'నైపుణ్య అభివృద్ధి', government: 'ప్రభుత్వ పథకం', financial: 'ఆర్థిక సహాయం', internship: 'ఇంటర్న్‌షిప్' } },
+    step2: { title: 'మీ విద్యార్హత ఏమిటి?', options: { below10: '10వ తరగతి కంటే తక్కువ', tenth: '10వ తరగతి', twelfth: '12వ తరగతి', diploma: 'డిప్లొమా', undergraduate: 'అండర్ గ్రాడ్యుయేట్', graduate: 'గ్రాడ్యుయేట్' } },
+    step3: { title: 'మీకు దేనిపై ఆసక్తి ఉంది?', options: { technology: 'సాంకేతికత', business: 'వ్యాపారం', agriculture: 'వ్యవసాయం', healthcare: 'ఆరోగ్య సంరక్షణ', design: 'డిజైన్', government_jobs: 'ప్రభుత్వ ఉద్యోగాలు', skilled_trades: 'నైపుణ్య వృత్తులు', other: 'ఇతర' } },
+    step4: { title: 'మీరు ఎక్కడ నివసిస్తున్నారు?', state: 'రాష్ట్రం', city: 'నగరం / జిల్లా', statePlaceholder: 'ఉదా. తమిళనాడు', cityPlaceholder: 'ఉదా. కోయంబత్తూరు' },
+  },
+  results: {
+    title: 'మీ కోసం అవకాశాలు',
+    subtitle: 'మీరు చెప్పిన దాని ఆధారంగా, మీకు సరిపోయే అవకాశాలు ఇక్కడ ఉన్నాయి.',
+    match: 'సరిపోలిక',
+    viewDetails: 'వివరాలు చూడండి',
+    benefit: 'ప్రయోజనం',
+    deadline: 'చివరి తేదీ',
+    location: 'ప్రాంతం',
+    demoLabel: 'డెమో డేటా',
+    empty: { title: 'ఖచ్చితమైన సరిపోలిక కనుగొనబడలేదు.', subtitle: 'మరిన్ని అవకాశాలను చూడటానికి వీటిలో ఒకటి ప్రయత్నించండి:', changeEducation: 'విద్యార్హతను మార్చండి', changeLocation: 'ప్రాంతాన్ని మార్చండి', removeFilter: 'ఫిల్టర్‌ను తీసివేయండి', tryAnotherSearch: 'మరో శోధన ప్రయత్నించండి', askAI: 'UpliftAIని అడగండి' },
+  },
+  search: { placeholder: 'మీరు ఏ అవకాశం కోసం వెతుకుతున్నారు?', button: 'శోధించు', loading: 'అవకాశాలను కనుగొంటున్నాము…', examples: ['కళాశాల విద్యార్థుల కోసం స్కాలర్‌షిప్‌లు', 'ఉచిత కోడింగ్ కోర్సులు', 'ప్రభుత్వ పథకాలు', '12వ తరగతి పాస్ విద్యార్థుల కోసం ఉద్యోగాలు', 'సమీపంలోని నైపుణ్య కోర్సులు'] },
+  filters: { title: 'ఫిల్టర్‌లు', category: 'వర్గం', education: 'విద్యార్హత', location: 'ప్రాంతం', eligibility: 'అర్హత', deadline: 'చివరి తేదీ', type: 'అవకాశం రకం', all: 'అన్నీ', clear: 'ఫిల్టర్‌లను క్లియర్ చేయండి' },
+  categories: { scholarship: 'స్కాలర్‌షిప్', job: 'ఉద్యోగం', internship: 'ఇంటర్న్‌షిప్', skill: 'నైపుణ్య కోర్సు', government: 'ప్రభుత్వ పథకం', financial: 'ఆర్థిక సహాయం' },
+  details: {
+    eligibility: 'అర్హత', benefits: 'ప్రయోజనాలు', documents: 'అవసరమైన పత్రాలు', howToApply: 'ఎలా దరఖాస్తు చేయాలి', apply: 'దరఖాస్తు చేయండి / అధికారిక వెబ్‌సైట్',
+    demoNotice: 'ఇది ప్రదర్శన ప్రయోజనాల కోసం ప్రోటోటైప్ డెమో డేటా. ఇది అధికారిక అవకాశాల జాబితా కాదు.',
+    simplify: 'దీన్ని సరళీకరించండి', simplifying: 'సరళీకరిస్తున్నాము…', loading: 'అవకాశం లోడ్ అవుతోంది…',
+    steps: ['అర్హతను తనిఖీ చేయండి', 'పత్రాలను సిద్ధం చేయండి', 'అధికారిక దరఖాస్తు పోర్టల్‌ను సందర్శించండి', 'దరఖాస్తును సమర్పించండి', 'స్థితిని ట్రాక్ చేయండి'],
+  },
+  chat: {
+    launcher: 'UpliftAIని అడగండి', title: 'UpliftAI సహాయకుడు', subtitle: 'Google Gemini ద్వారా శక్తినిస్తుంది', placeholder: 'మీ ప్రశ్నను టైప్ చేయండి…', send: 'పంపండి', thinking: 'UpliftAI ఆలోచిస్తోంది…', clear: 'చాట్‌ను క్లియర్ చేయండి', mic: 'మీ ప్రశ్నను మాట్లాడండి', micUnsupported: 'ఈ బ్రౌజర్‌లో వాయిస్ ఇన్‌పుట్ మద్దతు లేదు. దయచేసి టైప్ చేయండి.', readAloud: 'బిగ్గరగా చదవండి', error: 'UpliftAI తాత్కాలికంగా అందుబాటులో లేదు. దయచేసి మళ్ళీ ప్రయత్నించండి.', retry: 'మళ్ళీ ప్రయత్నించండి', greeting: 'నమస్కారం! నేను UpliftAI. స్కాలర్‌షిప్‌లు, ఉద్యోగాలు, నైపుణ్యాలు లేదా ప్రభుత్వ పథకాల గురించి నన్ను అడగండి — నేను వాటిని సరళంగా మరియు మీ భాషలో వివరిస్తాను.',
+  },
+  accessibility: { title: 'ప్రాప్యత', increaseText: 'టెక్స్ట్ పరిమాణాన్ని పెంచండి', decreaseText: 'టెక్స్ట్ పరిమాణాన్ని తగ్గించండి', highContrast: 'అధిక కాంట్రాస్ట్', reduceMotion: 'చలనాన్ని తగ్గించండి', readAloud: 'బిగ్గరగా చదివే మోడ్', keyboardNav: 'కీబోర్డ్ నావిగేషన్ గైడ్', reset: 'ప్రాప్యత సెట్టింగ్‌లను రీసెట్ చేయండి', close: 'మూసివేయండి' },
+  trust: { title: 'నమ్మదగిన సమాచారం', points: ['UpliftAI వినియోగదారులకు అవకాశాలను కనుగొనడంలో సహాయపడుతుంది.', 'దరఖాస్తు చేసే ముందు అధికారిక వెబ్‌సైట్‌లలో ముఖ్యమైన సమాచారాన్ని ధృవీకరించండి.', 'UpliftAI అర్హతకు హామీ ఇవ్వదు.', 'డెమో అవకాశాలు స్పష్టంగా లేబుల్ చేయబడ్డాయి.', 'దరఖాస్తు చేసే ముందు చివరి తేదీలను తనిఖీ చేయండి.', 'మేము ఎప్పుడూ అనవసరమైన సున్నితమైన సమాచారాన్ని అడగము.'] },
+  impact: { title: 'అవకాశ అడ్డంకిని బద్దలు కొట్టడం', cards: { economic: { title: 'ఆర్థిక చేరిక', desc: 'అవకాశాలను కనుగొనడాన్ని సులభతరం చేయడం.' }, language: { title: 'భాషా చేరిక', desc: 'వినియోగదారులకు అర్థమయ్యే భాషల్లో సమాచారం అందించడం.' }, matching: { title: 'అవకాశ సరిపోలిక', desc: 'వినియోగదారులు సంబంధిత అవకాశాలను వేగంగా కనుగొనడంలో సహాయపడటం.' } } },
+  stats: { title: 'ప్రోటోటైప్ / డెమో గణాంకాలు', items: [{ value: '10,000+', label: 'డెమో అవకాశాలు' }, { value: '5', label: 'భారతీయ భాషలు' }, { value: '1', label: 'సమగ్ర వేదిక' }, { value: '∞', label: 'అవకాశాలు' }] },
+  footer: { tagline: 'అందరికీ అవకాశాలను అందుబాటులో ఉంచడం.', links: { home: 'హోమ్', opportunities: 'అవకాశాలు', accessibility: 'ప్రాప్యత', languages: 'భాషలు', about: 'మా గురించి' }, copyright: '© 2026 UpliftAI', team: 'BY TEAM AXINO' },
+  common: { loading: 'లోడ్ అవుతోంది…', error: 'ఏదో తప్పు జరిగింది. దయచేసి మళ్ళీ ప్రయత్నించండి.', close: 'మూసివేయండి' },
+};
+
+const kn = {
+  brand: 'UpliftAI',
+  tagline: 'ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ಅವಕಾಶಗಳು. ಉತ್ತಮ ಭವಿಷ್ಯ ಈಗ ಕೈಗೆಟುಕುವಂತಿದೆ.',
+  nav: { home: 'ಮುಖಪುಟ', opportunities: 'ಅವಕಾಶಗಳು', about: 'ನಮ್ಮ ಬಗ್ಗೆ', accessibility: 'ಪ್ರವೇಶಿಸುವಿಕೆ' },
+  hero: {
+    headline: 'ನಿಮ್ಮ ಅವಕಾಶ ಇಲ್ಲಿಂದ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ.',
+    subheading: 'ಶಿಷ್ಯವೇತನಗಳು, ಉದ್ಯೋಗಗಳು, ಕೌಶಲ್ಯಗಳು, ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು ಮತ್ತು ಆರ್ಥಿಕ ಬೆಂಬಲವನ್ನು — ನಿಮಗೆ ಅರ್ಥವಾಗುವ ಭಾಷೆಯಲ್ಲಿ ಹುಡುಕಿ.',
+    primaryCta: 'ನನ್ನ ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ',
+    secondaryCta: 'ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ',
+  },
+  quickAccess: {
+    title: 'ವರ್ಗದ ಮೂಲಕ ಅನ್ವೇಷಿಸಿ',
+    subtitle: 'ಸಂಬಂಧಿತ ಅವಕಾಶಗಳಿಗೆ ನೇರವಾಗಿ ಹೋಗಲು ಒಂದು ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ.',
+    education: { title: 'ಶಿಕ್ಷಣ', desc: 'ಶಿಷ್ಯವೇತನಗಳು ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ.' },
+    jobs: { title: 'ಉದ್ಯೋಗಗಳು', desc: 'ಸೂಕ್ತ ಉದ್ಯೋಗ ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ.' },
+    skills: { title: 'ಕೌಶಲ್ಯಗಳು', desc: 'ಉಚಿತ ಮತ್ತು ಕೈಗೆಟುಕುವ ಕೌಶಲ್ಯ-ಅಭಿವೃದ್ಧಿ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಹುಡುಕಿ.' },
+    financial: { title: 'ಆರ್ಥಿಕ ಬೆಂಬಲ', desc: 'ಆರ್ಥಿಕ ನೆರವು ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ.' },
+    government: { title: 'ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು', desc: 'ಸಂಬಂಧಿತ ಸರ್ಕಾರಿ ಬೆಂಬಲವನ್ನು ಅನ್ವೇಷಿಸಿ.' },
+    internships: { title: 'ಇಂಟರ್ನ್‌ಶಿಪ್‌ಗಳು', desc: 'ಇಂಟರ್ನ್‌ಶಿಪ್ ಮತ್ತು ಆರಂಭಿಕ ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ.' },
+    cta: 'ಅನ್ವೇಷಿಸಿ',
+  },
+  onboarding: {
+    title: 'ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ವೈಯಕ್ತಿಕಗೊಳಿಸೋಣ',
+    stepLabel: 'ಹಂತ {current} / {total}',
+    back: 'ಹಿಂದೆ',
+    next: 'ಮುಂದೆ',
+    finish: 'ನನ್ನ ಅವಕಾಶಗಳನ್ನು ತೋರಿಸಿ',
+    loading: 'ನಿಮ್ಮ ಫಲಿತಾಂಶಗಳನ್ನು ವೈಯಕ್ತಿಕಗೊಳಿಸಲಾಗುತ್ತಿದೆ…',
+    step1: { title: 'ನೀವು ಏನನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಿ?', options: { education: 'ಶಿಕ್ಷಣ', job: 'ಉದ್ಯೋಗ', skill: 'ಕೌಶಲ್ಯ ಅಭಿವೃದ್ಧಿ', government: 'ಸರ್ಕಾರಿ ಯೋಜನೆ', financial: 'ಆರ್ಥಿಕ ನೆರವು', internship: 'ಇಂಟರ್ನ್‌ಶಿಪ್' } },
+    step2: { title: 'ನಿಮ್ಮ ಶಿಕ್ಷಣ ಮಟ್ಟ ಏನು?', options: { below10: '10ನೇ ತರಗತಿಗಿಂತ ಕೆಳಗೆ', tenth: '10ನೇ ತರಗತಿ', twelfth: '12ನೇ ತರಗತಿ', diploma: 'ಡಿಪ್ಲೊಮಾ', undergraduate: 'ಪದವಿಪೂರ್ವ', graduate: 'ಪದವೀಧರ' } },
+    step3: { title: 'ನಿಮಗೆ ಯಾವುದರಲ್ಲಿ ಆಸಕ್ತಿ ಇದೆ?', options: { technology: 'ತಂತ್ರಜ್ಞಾನ', business: 'ವ್ಯಾಪಾರ', agriculture: 'ಕೃಷಿ', healthcare: 'ಆರೋಗ್ಯ ಸೇವೆ', design: 'ವಿನ್ಯಾಸ', government_jobs: 'ಸರ್ಕಾರಿ ಉದ್ಯೋಗಗಳು', skilled_trades: 'ಕುಶಲ ವೃತ್ತಿಗಳು', other: 'ಇತರೆ' } },
+    step4: { title: 'ನೀವು ಎಲ್ಲಿ ವಾಸಿಸುತ್ತೀರಿ?', state: 'ರಾಜ್ಯ', city: 'ನಗರ / ಜಿಲ್ಲೆ', statePlaceholder: 'ಉದಾ. ತಮಿಳುನಾಡು', cityPlaceholder: 'ಉದಾ. ಕೊಯಮತ್ತೂರು' },
+  },
+  results: {
+    title: 'ನಿಮಗಾಗಿ ಅವಕಾಶಗಳು',
+    subtitle: 'ನೀವು ಹೇಳಿದ ಆಧಾರದ ಮೇಲೆ, ನಿಮಗೆ ಸೂಕ್ತವಾದ ಅವಕಾಶಗಳು ಇಲ್ಲಿವೆ.',
+    match: 'ಹೊಂದಾಣಿಕೆ',
+    viewDetails: 'ವಿವರಗಳನ್ನು ವೀಕ್ಷಿಸಿ',
+    benefit: 'ಪ್ರಯೋಜನ',
+    deadline: 'ಅಂತಿಮ ದಿನಾಂಕ',
+    location: 'ಸ್ಥಳ',
+    demoLabel: 'ಡೆಮೊ ಡೇಟಾ',
+    empty: { title: 'ನಿಖರವಾದ ಹೊಂದಾಣಿಕೆ ಕಂಡುಬಂದಿಲ್ಲ.', subtitle: 'ಹೆಚ್ಚಿನ ಅವಕಾಶಗಳನ್ನು ನೋಡಲು ಇವುಗಳಲ್ಲಿ ಒಂದನ್ನು ಪ್ರಯತ್ನಿಸಿ:', changeEducation: 'ಶಿಕ್ಷಣ ಮಟ್ಟವನ್ನು ಬದಲಾಯಿಸಿ', changeLocation: 'ಸ್ಥಳವನ್ನು ಬದಲಾಯಿಸಿ', removeFilter: 'ಫಿಲ್ಟರ್ ತೆಗೆದುಹಾಕಿ', tryAnotherSearch: 'ಇನ್ನೊಂದು ಹುಡುಕಾಟ ಪ್ರಯತ್ನಿಸಿ', askAI: 'UpliftAI ಅನ್ನು ಕೇಳಿ' },
+  },
+  search: { placeholder: 'ನೀವು ಯಾವ ಅವಕಾಶವನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಿ?', button: 'ಹುಡುಕಿ', loading: 'ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ…', examples: ['ಕಾಲೇಜು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಶಿಷ್ಯವೇತನಗಳು', 'ಉಚಿತ ಕೋಡಿಂಗ್ ಕೋರ್ಸ್‌ಗಳು', 'ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು', '12ನೇ ತರಗತಿ ಪಾಸಾದ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಉದ್ಯೋಗಗಳು', 'ಹತ್ತಿರದ ಕೌಶಲ್ಯ ಕೋರ್ಸ್‌ಗಳು'] },
+  filters: { title: 'ಫಿಲ್ಟರ್‌ಗಳು', category: 'ವರ್ಗ', education: 'ಶಿಕ್ಷಣ ಮಟ್ಟ', location: 'ಸ್ಥಳ', eligibility: 'ಅರ್ಹತೆ', deadline: 'ಅಂತಿಮ ದಿನಾಂಕ', type: 'ಅವಕಾಶದ ಪ್ರಕಾರ', all: 'ಎಲ್ಲಾ', clear: 'ಫಿಲ್ಟರ್‌ಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ' },
+  categories: { scholarship: 'ಶಿಷ್ಯವೇತನ', job: 'ಉದ್ಯೋಗ', internship: 'ಇಂಟರ್ನ್‌ಶಿಪ್', skill: 'ಕೌಶಲ್ಯ ಕೋರ್ಸ್', government: 'ಸರ್ಕಾರಿ ಯೋಜನೆ', financial: 'ಆರ್ಥಿಕ ನೆರವು' },
+  details: {
+    eligibility: 'ಅರ್ಹತೆ', benefits: 'ಪ್ರಯೋಜನಗಳು', documents: 'ಅಗತ್ಯವಿರುವ ದಾಖಲೆಗಳು', howToApply: 'ಅರ್ಜಿ ಸಲ್ಲಿಸುವುದು ಹೇಗೆ', apply: 'ಅರ್ಜಿ ಸಲ್ಲಿಸಿ / ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್',
+    demoNotice: 'ಇದು ಪ್ರದರ್ಶನ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾದರಿ ಡೆಮೊ ಡೇಟಾ. ಇದು ಅಧಿಕೃತ ಅವಕಾಶ ಪಟ್ಟಿ ಅಲ್ಲ.',
+    simplify: 'ಇದನ್ನು ಸರಳಗೊಳಿಸಿ', simplifying: 'ಸರಳಗೊಳಿಸಲಾಗುತ್ತಿದೆ…', loading: 'ಅವಕಾಶ ಲೋಡ್ ಆಗುತ್ತಿದೆ…',
+    steps: ['ಅರ್ಹತೆಯನ್ನು ಪರಿಶೀಲಿಸಿ', 'ದಾಖಲೆಗಳನ್ನು ಸಿದ್ಧಪಡಿಸಿ', 'ಅಧಿಕೃತ ಅರ್ಜಿ ಪೋರ್ಟಲ್‌ಗೆ ಭೇಟಿ ನೀಡಿ', 'ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಿ', 'ಸ್ಥಿತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ'],
+  },
+  chat: {
+    launcher: 'UpliftAI ಅನ್ನು ಕೇಳಿ', title: 'UpliftAI ಸಹಾಯಕ', subtitle: 'Google Gemini ನಿಂದ ಚಾಲಿತ', placeholder: 'ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಟೈಪ್ ಮಾಡಿ…', send: 'ಕಳುಹಿಸಿ', thinking: 'UpliftAI ಯೋಚಿಸುತ್ತಿದೆ…', clear: 'ಚಾಟ್ ತೆರವುಗೊಳಿಸಿ', mic: 'ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಮಾತನಾಡಿ', micUnsupported: 'ಈ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಧ್ವನಿ ಇನ್‌ಪುಟ್ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಟೈಪ್ ಮಾಡಿ.', readAloud: 'ಗಟ್ಟಿಯಾಗಿ ಓದಿ', error: 'UpliftAI ತಾತ್ಕಾಲಿಕವಾಗಿ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.', retry: 'ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ', greeting: 'ನಮಸ್ಕಾರ! ನಾನು UpliftAI. ಶಿಷ್ಯವೇತನಗಳು, ಉದ್ಯೋಗಗಳು, ಕೌಶಲ್ಯಗಳು ಅಥವಾ ಸರ್ಕಾರಿ ಯೋಜನೆಗಳ ಬಗ್ಗೆ ನನ್ನನ್ನು ಕೇಳಿ — ನಾನು ಅವುಗಳನ್ನು ಸರಳವಾಗಿ ಮತ್ತು ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ವಿವರಿಸುತ್ತೇನೆ.',
+  },
+  accessibility: { title: 'ಪ್ರವೇಶಿಸುವಿಕೆ', increaseText: 'ಪಠ್ಯ ಗಾತ್ರವನ್ನು ಹೆಚ್ಚಿಸಿ', decreaseText: 'ಪಠ್ಯ ಗಾತ್ರವನ್ನು ಕಡಿಮೆ ಮಾಡಿ', highContrast: 'ಹೆಚ್ಚಿನ ಕಾಂಟ್ರಾಸ್ಟ್', reduceMotion: 'ಚಲನೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಿ', readAloud: 'ಗಟ್ಟಿಯಾಗಿ ಓದುವ ಮೋಡ್', keyboardNav: 'ಕೀಬೋರ್ಡ್ ನ್ಯಾವಿಗೇಷನ್ ಮಾರ್ಗದರ್ಶಿ', reset: 'ಪ್ರವೇಶಿಸುವಿಕೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮರುಹೊಂದಿಸಿ', close: 'ಮುಚ್ಚಿ' },
+  trust: { title: 'ನಂಬಬಹುದಾದ ಮಾಹಿತಿ', points: ['UpliftAI ಬಳಕೆದಾರರಿಗೆ ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.', 'ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ಮೊದಲು ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್‌ಗಳಲ್ಲಿ ಪ್ರಮುಖ ಮಾಹಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ.', 'UpliftAI ಅರ್ಹತೆಯನ್ನು ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ.', 'ಡೆಮೊ ಅವಕಾಶಗಳನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಲೇಬಲ್ ಮಾಡಲಾಗಿದೆ.', 'ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ಮೊದಲು ಅಂತಿಮ ದಿನಾಂಕಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.', 'ನಾವು ಎಂದಿಗೂ ಅನಗತ್ಯ ಸೂಕ್ಷ್ಮ ಮಾಹಿತಿಯನ್ನು ಕೇಳುವುದಿಲ್ಲ.'] },
+  impact: { title: 'ಅವಕಾಶದ ಅಡೆತಡೆಯನ್ನು ಮುರಿಯುವುದು', cards: { economic: { title: 'ಆರ್ಥಿಕ ಸೇರ್ಪಡೆ', desc: 'ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯುವುದನ್ನು ಸುಲಭಗೊಳಿಸುವುದು.' }, language: { title: 'ಭಾಷಾ ಸೇರ್ಪಡೆ', desc: 'ಬಳಕೆದಾರರಿಗೆ ಅರ್ಥವಾಗುವ ಭಾಷೆಗಳಲ್ಲಿ ಮಾಹಿತಿ ನೀಡುವುದು.' }, matching: { title: 'ಅವಕಾಶ ಹೊಂದಾಣಿಕೆ', desc: 'ಬಳಕೆದಾರರಿಗೆ ಸಂಬಂಧಿತ ಅವಕಾಶಗಳನ್ನು ವೇಗವಾಗಿ ಕಂಡುಹಿಡಿಯಲು ಸಹಾಯ ಮಾಡುವುದು.' } } },
+  stats: { title: 'ಪ್ರೋಟೋಟೈಪ್ / ಡೆಮೊ ಅಂಕಿಅಂಶಗಳು', items: [{ value: '10,000+', label: 'ಡೆಮೊ ಅವಕಾಶಗಳು' }, { value: '5', label: 'ಭಾರತೀಯ ಭಾಷೆಗಳು' }, { value: '1', label: 'ಸಮಗ್ರ ವೇದಿಕೆ' }, { value: '∞', label: 'ಸಾಧ್ಯತೆಗಳು' }] },
+  footer: { tagline: 'ಎಲ್ಲರಿಗೂ ಅವಕಾಶಗಳನ್ನು ಪ್ರವೇಶಿಸುವಂತೆ ಮಾಡುವುದು.', links: { home: 'ಮುಖಪುಟ', opportunities: 'ಅವಕಾಶಗಳು', accessibility: 'ಪ್ರವೇಶಿಸುವಿಕೆ', languages: 'ಭಾಷೆಗಳು', about: 'ನಮ್ಮ ಬಗ್ಗೆ' }, copyright: '© 2026 UpliftAI', team: 'BY TEAM AXINO' },
+  common: { loading: 'ಲೋಡ್ ಆಗುತ್ತಿದೆ…', error: 'ಏನೋ ತಪ್ಪಾಗಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.', close: 'ಮುಚ್ಚಿ' },
+};
+
+export const TRANSLATIONS = { en, ta, hi, te, kn };
+
+export function t(lang, path, vars = {}) {
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  const parts = path.split('.');
+  let value = dict;
+  for (const p of parts) {
+    value = value?.[p];
+  }
+  if (value === undefined) {
+    // fallback to English
+    let fallback = TRANSLATIONS.en;
+    for (const p of parts) fallback = fallback?.[p];
+    value = fallback;
+  }
+  if (typeof value === 'string') {
+    return value.replace(/\{(\w+)\}/g, (_, key) => (vars[key] !== undefined ? vars[key] : `{${key}}`));
+  }
+  return value;
+}
